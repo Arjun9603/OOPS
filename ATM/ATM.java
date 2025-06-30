@@ -6,6 +6,10 @@ class ATMmchine {
     float balance = 0; // initial balance
     int PIN = 1234;
 
+     public ATMmchine(){
+        checkPin();
+     }
+
     public void checkPin() {
         System.out.println("Enter your PIN:");
         Scanner sc = new Scanner(System.in);
@@ -23,11 +27,11 @@ class ATMmchine {
 
         while (true) {
             System.out.println("\n========= ATM Menu =========");
-            System.out.println("1. Check A/C Balance");
-            System.out.println("2. Withdraw Money");
-            System.out.println("3. Deposit Money");
-            System.out.println("4. Exit");
-            System.out.println("Enter your choice: ");
+            System.out.println("\n1. Check A/C Balance");
+            System.out.println("\n2. Withdraw Money");
+            System.out.println("\n3. Deposit Money");
+            System.out.println("\n4. Exit");
+            System.out.println("\nEnter your choice: ");
             int opt = sc.nextInt();
 
             switch (opt) {
@@ -87,7 +91,7 @@ class ATMmchine {
 public class ATM {
     public static void main(String[] args) {
         ATMmchine obj = new ATMmchine();
-        obj.checkPin();
+        // obj.checkPin();
     }
 }
 
